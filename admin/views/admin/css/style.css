@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background-color: blue;
+	color: white;
+	padding: 2px 0px 2px 20px;
+}
+
+.main {
+	background-color: green;
+	height: 100%; 
+	display: flex;
+	flex-direction: row;
+}
+
+.side {
+	background-color: skyblue;
+	flex: 15%;
+}
+
+.side a {
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+	background-color: #ddd;
+	color: black;
+}
+
+.side a:hover {
+	color: white;
+	font-weight: bold;
+	background-color: skyblue;
+}
+
+.content {
+	background-color: white;
+	padding: 20px;
+	flex: 70%;
+}
+
+.footer {
+	background-color: blue;
+	text-align: center;
+	color: white;
+}
