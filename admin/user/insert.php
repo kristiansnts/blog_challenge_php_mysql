@@ -5,11 +5,16 @@ include('../../connection.php');
 $username = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $about = $_POST['about'];
-
 $photo = $_FILES['photo']['name'];
-$tmp_name = $_FILES['photo']['tmp_name'];
-$dirUpload = "uploads/";
-$upload = move_uploaded_file($tmp_name, $dirUpload.$photo);
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+	if(isset($_FILES['photo']['name'])){
+		$tmp_name = $_FILES['photo']['tmp_name'];
+		$dirUpload = "uploads/";
+		$upload = move_uploaded_file($tmp_name, $dirUpload.$photo);
+	}	
+}
+
 
 $table = 'user';
 
